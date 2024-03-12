@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    char i;
+    int red,yellow,green;
+    red = 120;
+    yellow = 30;
+    green = 120;
+    cout << "Welcome please insert the stoplight colour (r=red;g=green;y=yellow): ";
+    cin >> i;
+    switch (i) {
+    case "r":
+        cout << "Stop and wait for the stoplight to turn green! ";
+        do {
+            cout << red << "seconds left\n";
+                red--;
+        } while (red > 0);
+        break;
+    case "y":
+        cout << "Start to slow down!";
+        do {
+            cout << yellow << "seconds left\n";
+            yellow--;
+        } while (yellow > 0);
+            break;
+    case "g":
+        cout << "Check left and right then go!";
+        do {
+            cout << green << "seconds left\n";
+            green--;
+        } while (green > 0);
+            break;
+    default:
+        cout << "Invalid,  try using 'g','y' or 'r'!"
+    }
+    return 0;
+}
